@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - stock_system@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="stock_system">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="b"/>
+    <schema id="4" parent="1" name="bank"/>
+    <schema id="5" parent="1" name="c"/>
+    <schema id="6" parent="1" name="d"/>
+    <schema id="7" parent="1" name="db_database28"/>
+    <schema id="8" parent="1" name="demo"/>
+    <schema id="9" parent="1" name="demo2"/>
+    <schema id="10" parent="1" name="demo3"/>
+    <schema id="11" parent="1" name="fruit"/>
+    <schema id="12" parent="1" name="information_schema"/>
+    <schema id="13" parent="1" name="itcast"/>
+    <schema id="14" parent="1" name="mysql"/>
+    <schema id="15" parent="1" name="performance_schema"/>
+    <schema id="16" parent="1" name="sakila"/>
+    <schema id="17" parent="1" name="sc_management"/>
+    <schema id="18" parent="1" name="springblog"/>
+    <schema id="19" parent="1" name="stus"/>
+    <schema id="20" parent="1" name="test"/>
+    <schema id="21" parent="1" name="user"/>
+    <schema id="22" parent="1" name="world"/>
+    <table id="23" parent="2" name="holding"/>
+    <table id="24" parent="2" name="trade"/>
+    <table id="25" parent="2" name="tradetype"/>
+    <table id="26" parent="2" name="users"/>
+    <column id="27" parent="23" name="holdid">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="23" name="usersid">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="23" name="number">
+      <Position>3</Position>
+      <DataType>decimal(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="23" name="avgprice">
+      <Position>4</Position>
+      <DataType>decimal(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="23" name="stockid">
+      <Position>5</Position>
+      <DataType>decimal(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="23" name="money">
+      <Position>6</Position>
+      <DataType>decimal(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="33" parent="23" name="FK_Reference_1">
+      <ColNames>usersid</ColNames>
+    </index>
+    <key id="34" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>holdid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="35" parent="23" name="FK_Reference_1">
+      <ColNames>usersid</ColNames>
+      <RefSchemaName>stock_system</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>usersid</RefColNames>
+    </foreign-key>
+    <column id="36" parent="24" name="tradeid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="24" name="tradeprice">
+      <Position>2</Position>
+      <DataType>decimal(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="24" name="tradenumber">
+      <Position>3</Position>
+      <DataType>decimal(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="24" name="tradedate">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="24" name="tradetypeid">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="24" name="usersid">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="42" parent="24" name="holdid">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <index id="43" parent="24" name="FK_Reference_2">
+      <ColNames>tradetypeid</ColNames>
+    </index>
+    <index id="44" parent="24" name="FK_Reference_3">
+      <ColNames>usersid</ColNames>
+    </index>
+    <index id="45" parent="24" name="FK_Reference_4">
+      <ColNames>holdid</ColNames>
+    </index>
+    <key id="46" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tradeid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="24" name="FK_Reference_2">
+      <ColNames>tradetypeid</ColNames>
+      <RefSchemaName>stock_system</RefSchemaName>
+      <RefTableName>tradetype</RefTableName>
+      <RefColNames>tradetypeid</RefColNames>
+    </foreign-key>
+    <foreign-key id="48" parent="24" name="FK_Reference_3">
+      <ColNames>usersid</ColNames>
+      <RefSchemaName>stock_system</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>usersid</RefColNames>
+    </foreign-key>
+    <foreign-key id="49" parent="24" name="FK_Reference_4">
+      <ColNames>holdid</ColNames>
+      <RefSchemaName>stock_system</RefSchemaName>
+      <RefTableName>holding</RefTableName>
+      <RefColNames>holdid</RefColNames>
+    </foreign-key>
+    <column id="50" parent="25" name="tradetypeid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="51" parent="25" name="type">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="52" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tradetypeid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="26" name="usersid">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="26" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="26" name="password">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="26" name="email">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="26" name="phone">
+      <Position>5</Position>
+      <DataType>decimal(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="58" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>usersid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
