@@ -1,6 +1,6 @@
 <%@page pageEncoding="GBK" %>
 <%@page import="java.util.*"  %>
-<%@page import="com.firstgroup.entity.*" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
@@ -94,30 +94,7 @@ type=text/javascript></SCRIPT>
                   <TH class=gridviewHeader scope=col>¸üÐÂ</TH>
                   <TH class=gridviewHeader scope=col>É¾³ý</TH>
                 </TR>
-                <% 
-                	List list1=(List)request.getAttribute("stocklist1"); 
-                	Stock_Own stockown=null;  
-                	 
-                	for(int i=0;i<list1.size();i++){ 
-                		stockown=new Stock_Own(); 
-                		stockown=(Stock_Own )list1.get(i);  
-                %>
-                		      <TR>
-                  <TD class=gridViewItem style="WIDTH: 50px"><img src="EmployeeMgr.files/bg_users.gif"> </TD>
-                  <TD class=gridViewItem><%=stockown.getT_stockid() %><br></TD>
-                  <TD class=gridViewItem><%=stockown.getT_stockname() %><br></TD>
-                  <TD class=gridViewItem><%=stockown.getT_stocknum() %><br></TD>
-                  <TD class=gridViewItem><%=stockown.getT_stockprice() %><br></TD>
-                  <TD class=gridViewItem><%=stockown.getT_ownname() %><br></TD>
-                  <TD class=gridViewItem>
-                  <a class="cmdField" href="<%=request.getContextPath()%>/actionServlet?actionCode=stock&amp;methodCode=update&amp;s_id=<%=stockown.getS_id()%>&amp;o_id=<%=stockown.getO_id()%>">±à¼­</a></TD>
-                  <TD class=gridViewItem>
-                  <a class="cmdField" id="ctl00_ContentPlaceHolder2_GridView1_ctl02_LinkButton1" onclick="return confirm('È·¶¨ÒªÉ¾³ýÂð£¿');" href="<%=request.getContextPath()%>/actionServlet?actionCode=stock&amp;methodCode=deletestock&amp;s_id=<%=stockown.getS_id()%>&amp;o_id=<%=stockown.getO_id()%>">É¾³ý</a> </TD>
-                </TR>
-                <% 
-                	} 
-                %>    
-                <TR > <table align="center"><td class=gridViewItem><a class="cmdField"   href="<%=request.getContextPath()%>/actionServlet?actionCode=stock&amp;methodCode=showstock&amp;"><font size=4px>·µ»Ø</font></a></td></table> </TR> 
+
               </TBODY>
             </TABLE>
           </DIV>

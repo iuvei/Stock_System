@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
-<%@page import="com.firstgroup.entity.*" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
 <HTML>
@@ -148,17 +148,7 @@ type=text/javascript></SCRIPT>
                   <TH  class=gridViewHeader style="text-align: right" scope=col>≥÷”–»À</TH>
                   <TH  scope=col><select name="owner" class="easyui-validatebox" required="true" >
                     <option>--</option>
-               <%
-                 MyUserInfo user=null;
-                 List list=(List)request.getAttribute("userlist");
-              	  for(int i=0;i<list.size();i++){
-              	     user=new MyUserInfo();
-              	     user=(MyUserInfo)list.get(i);
-              	  %>
-              	  <option value="<%=user.getT_userid()%>"><%=user.getT_username() %></option>
-              	  <%
-              	   }
-               %>
+
                   
                   </select></TH>
                   </TR>

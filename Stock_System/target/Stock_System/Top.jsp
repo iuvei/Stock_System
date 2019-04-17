@@ -1,7 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <HTML>
 <HEAD id=Head1>
-<TITLE>ÎÞ±êÌâÒ³</TITLE>
+<TITLE>æ— æ ‡é¢˜é¡µ</TITLE>
 <META http-equiv=Content-Type content="text/html; charset=GBK">
 <STYLE type=text/css> 
 *{
@@ -27,13 +30,11 @@ style="BACKGROUND-IMAGE: url(images/bg.gif); MARGIN: 0px; BACKGROUND-REPEAT: rep
 style="BACKGROUND-IMAGE: url(images/logo.png); BACKGROUND-REPEAT: no-repeat">
     <DIV 
 style="PADDING-RIGHT: 50px; BACKGROUND-POSITION: right 50%; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(images/bg_banner_menu.gif); PADDING-BOTTOM: 0px; PADDING-TOP: 3px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 30px; TEXT-ALIGN: right"><A 
-href="http://localhost:1479/Web/sys/Top.aspx#"><IMG src="Top.files/mail.gif" 
-align=absMiddle border=0></A> ÄúÓÐÐÂÏûÏ¢<A id=HyperLink1 
-href="http://localhost:1479/Web/sys/Top.aspx#">5</A>Ìõ <IMG 
+
 src="Top.files/menu_seprator.gif" align=absMiddle> <A id=HyperLink2 
-href="http://localhost:1479/Web/sys/Index.aspx">·µ»ØÊ×Ò³</A> <IMG 
+href="http://localhost:1479/Web/sys/Index.aspx">è¿”å›žé¦–é¡µ</A> <IMG 
 src="Top.files/menu_seprator.gif" align=absMiddle> <A id=HyperLink3 
-href="javascript:window.opener=null;%20window.close();">ÍË³öÏµÍ³</A> </DIV>
+href="javascript:window.opener=null;window.close();">é€€å‡ºç³»ç»Ÿ</A> </DIV>
     <DIV style="DISPLAY: block; HEIGHT: 54px"></DIV>
     <DIV 
 style="BACKGROUND-IMAGE: url(images/bg_nav.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px">
@@ -41,20 +42,20 @@ style="BACKGROUND-IMAGE: url(images/bg_nav.gif); BACKGROUND-REPEAT: repeat-x; HE
         <TBODY>
           <TR>
             <TD>
-              <DIV><IMG src="Top.files/nav_pre.gif" align=absMiddle> »¶Ó­ <SPAN 
-      id=lblBra>¹ÉÆ±Ä£Äâ½»Ò×ÏµÍ³</SPAN> <SPAN id=lblDep>ºóÌ¨¹ÜÀí²¿</SPAN> [ÏµÍ³¹ÜÀíÔ± ] ¹âÁÙ </DIV>
+              <DIV><IMG src="Top.files/nav_pre.gif" align=absMiddle> æ¬¢è¿Ž <SPAN 
+      id=lblBra>è‚¡ç¥¨æ¨¡æ‹Ÿäº¤æ˜“ç³»ç»Ÿ</SPAN> <SPAN id=lblDep>çš„<s:property value="#session.usersEntity.usersid" /></SPAN> å…‰ä¸´ </DIV>
             </TD>
             <TD align=right width="70%"><SPAN style="PADDING-RIGHT: 50px"><A 
       href="javascript:history.go(-1);"><IMG src="Top.files/nav_back.gif" 
-      align=absMiddle border=0>ºóÍË</A> <A href="javascript:history.go(1);"><IMG 
-      src="Top.files/nav_forward.gif" align=absMiddle border=0>Ç°½ø</A> <A 
+      align=absMiddle border=0>åŽé€€</A> <A href="javascript:history.go(1);"><IMG 
+      src="Top.files/nav_forward.gif" align=absMiddle border=0>å‰è¿›</A> <A 
       href="http://localhost:1479/Web/default.aspx" target=_top><IMG 
-      src="Top.files/nav_changePassword.gif" align=absMiddle border=0>ÖØÐÂµÇÂ¼</A> <A href="http://localhost:1479/Web/sys/updatePwd.aspx" 
+      src="Top.files/nav_changePassword.gif" align=absMiddle border=0>é‡æ–°ç™»å½•</A> <A href="http://localhost:1479/Web/sys/updatePwd.aspx" 
       target=mainFrame><IMG src="Top.files/nav_resetPassword.gif" 
-      align=absMiddle border=0>ÐÞ¸ÄÃÜÂë</A> <A 
+      align=absMiddle border=0>ä¿®æ”¹å¯†ç </A> <A 
       href="http://localhost:1479/Web/sys/Top.aspx#" target=mainFrame><IMG 
-      src="Top.files/nav_help.gif" align=absMiddle border=0>°ïÖú</A> <IMG 
-      src="Top.files/menu_seprator.gif" align=absMiddle> <SPAN 
+      src="Top.files/nav_help.gif" align=absMiddle border=0>å¸®åŠ©</A> <IMG 
+      src="Top.files/menu_seprator.gif" align=absMiddle> <SPAN
       id=clock></SPAN></SPAN></TD>
           </TR>
         </TBODY>

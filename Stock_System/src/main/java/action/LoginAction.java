@@ -4,6 +4,7 @@ package action;
 import app.UsersEntity;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.web.bind.annotation.RequestMapping;
 import service.UserService;
 
 import java.util.Map;
@@ -53,6 +54,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
             usersEntity.setUsersid(usersid);
             usersEntity.setPassword(password);
             session.put("usersEntity",usersEntity);
+
             return "success";
         }else {
             super.addActionError("登陆失败！");
