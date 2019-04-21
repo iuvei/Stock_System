@@ -7,7 +7,8 @@
 	<constant name="struts.action.extension" value="action"/>
 	
 	<!-- 配置Action -->
-	<package name="stock_system" extends="struts-default" namespace="/">
+	<package name="Stock_System" namespace="/" extends="struts-default,json-default">
+
 
 		<!-- class属性中不写action的路径，因为在spring已经配置过了，应该写spring中bean的id -->
 		<action name="loginAction" class="loginAction" >
@@ -16,7 +17,7 @@
 		</action>
 
 		<action name="stockaction" class="stockaction" >
-			<result name="input">stock/test.jsp</result>
+			<result name="test">stock/test.jsp</result>
 		</action>
 	</package>
 </struts>

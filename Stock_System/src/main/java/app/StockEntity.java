@@ -321,4 +321,6 @@ public class StockEntity {
     public void setTime(String time) {
         this.time = time;
     }
+
+
 }
