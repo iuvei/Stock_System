@@ -13,7 +13,10 @@
 		<action name="loginAction" class="loginAction" >
 			<result name="success">main.html</result>
 			<result name="input">view/login.jsp</result>
+		</action>
 
+		<action name="stockaction" class="stockaction" >
+			<result name="input">stock/test.jsp</result>
 		</action>
 	</package>
 </struts>

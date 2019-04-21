@@ -62,13 +62,26 @@
         <property name="userService" ref="userService"></property>
     </bean>
 
+    <bean id="stockaction" class="action.Stockaction" scope="prototype">
+        <property name="stockService" ref="stockService"></property>
+    </bean>
+
 
     <bean id="userService" class="service.UserService">
         <property name="userDao" ref="userDao"></property>
     </bean>
 
+    <bean id="stockService" class="service.Impl.StockServiceImpl">
+        <property name="stockDao" ref="stockDao"></property>
+    </bean>
+
     <bean id="userDao" class="dao.UserDao">
         <property name="hibernateTemplate" ref="hibernateTemplate"></property>
     </bean>
+    <bean id="stockDao" class="dao.StockDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+
 </beans>
 

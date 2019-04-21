@@ -60,7 +60,9 @@ type=text/javascript></SCRIPT>
     style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; COLOR: #566984; PADDING-TOP: 10px; BACKGROUND-COLOR: white" 
     vAlign=top align=middle>
           <DIV>
-            <TABLE class=gridView id=ctl00_ContentPlaceHolder2_GridView1 
+
+
+            <TABLE class=gridView id=ctl00_ContentPlaceHolder2_GridView1
       style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 rules=all 
       border=1>
               <TBODY>
@@ -73,8 +75,7 @@ type=text/javascript></SCRIPT>
                         <td colspan="2"><input type="text" id="stockid" name="stockid" /></td>
                       	
                       <TD class=gridViewItem>
-                      <!--<A class=cmdField href="#" onclick="output();">≤È—Ø</A>
-                      --> 
+
                       		<input type="button" class="cmdField" value="≤È—Ø" onclick="outPut();">
                       </TD>
                       <td>&nbsp;</td>
