@@ -4,24 +4,36 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by 63128 on 2019/4/13.
+ * Created by 63128 on 2019/4/22.
  */
 @Entity
 @Table(name = "trade", schema = "stock_system", catalog = "")
 public class TradeEntity {
-    private int tradeid;
+    private String tradecode;
+    private String tradename;
     private int tradeprice;
     private int tradenumber;
     private Date tradedate;
+    private int cheak;
 
     @Id
-    @Column(name = "tradeid")
-    public int getTradeid() {
-        return tradeid;
+    @Column(name = "tradecode")
+    public String getTradecode() {
+        return tradecode;
     }
 
-    public void setTradeid(int tradeid) {
-        this.tradeid = tradeid;
+    public void setTradecode(String tradecode) {
+        this.tradecode = tradecode;
+    }
+
+    @Basic
+    @Column(name = "tradename")
+    public String getTradename() {
+        return tradename;
+    }
+
+    public void setTradename(String tradename) {
+        this.tradename = tradename;
     }
 
     @Basic
@@ -54,6 +66,16 @@ public class TradeEntity {
         this.tradedate = tradedate;
     }
 
+    @Basic
+    @Column(name = "cheak")
+    public int getCheak() {
+        return cheak;
+    }
+
+    public void setCheak(int cheak) {
+        this.cheak = cheak;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -61,9 +83,11 @@ public class TradeEntity {
 
         TradeEntity that = (TradeEntity) o;
 
-        if (tradeid != that.tradeid) return false;
         if (tradeprice != that.tradeprice) return false;
         if (tradenumber != that.tradenumber) return false;
+        if (cheak != that.cheak) return false;
+        if (tradecode != null ? !tradecode.equals(that.tradecode) : that.tradecode != null) return false;
+        if (tradename != null ? !tradename.equals(that.tradename) : that.tradename != null) return false;
         if (tradedate != null ? !tradedate.equals(that.tradedate) : that.tradedate != null) return false;
 
         return true;
@@ -71,10 +95,12 @@ public class TradeEntity {
 
     @Override
     public int hashCode() {
-        int result = tradeid;
+        int result = tradecode != null ? tradecode.hashCode() : 0;
+        result = 31 * result + (tradename != null ? tradename.hashCode() : 0);
         result = 31 * result + tradeprice;
         result = 31 * result + tradenumber;
         result = 31 * result + (tradedate != null ? tradedate.hashCode() : 0);
+        result = 31 * result + cheak;
         return result;
     }
 }

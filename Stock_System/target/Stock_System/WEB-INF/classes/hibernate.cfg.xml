@@ -31,12 +31,11 @@
 		<property name="c3p0.idle_test_period">3000</property>
 		<mapping resource="app/HoldingEntity.hbm.xml"/>
 		<mapping class="app.HoldingEntity"/>
+        <mapping resource="app/TradeinfoEntity.hbm.xml"/>
+        <mapping class="app.TradeinfoEntity"/>
 		<mapping resource="app/TradeEntity.hbm.xml"/>
 		<mapping class="app.TradeEntity"/>
-		<mapping resource="app/TradetypeEntity.hbm.xml"/>
-		<mapping class="app.TradetypeEntity"/>
-		<mapping resource="app/UsersEntity.hbm.xml"/>
-		<mapping class="app.UsersEntity"/>
+
 
 	</session-factory>
 </hibernate-configuration>

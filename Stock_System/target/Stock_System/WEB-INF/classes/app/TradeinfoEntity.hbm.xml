@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="app.TradeinfoEntity" table="tradeinfo" schema="stock_system">
+        <id name="tradeinfocode" column="tradeinfocode"/>
+        <property name="tradeinfoname" column="tradeinfoname"/>
+        <property name="tradeinfobuypride" column="tradeinfobuypride"/>
+        <property name="tradeinfodealnum" column="tradeinfodealnum"/>
+        <property name="tradeinfodate" column="tradeinfodate"/>
+    </class>
+</hibernate-mapping>

@@ -43,7 +43,7 @@ src="Left.files/bg_left_br.gif"></TD>
 </TABLE>
 <SCRIPT language="javascript">
 var tree = null;var root = new TreeNode('系统菜单');
-           var fun1 = new TreeNode('交易管理');var fun2 = new TreeNode('股票交易', '/stock/selectStock.jsp', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun2);var fun3 = new TreeNode('挂单情况', '/StockSpirit/actionServlet?actionCode=stockTrans&methodCode=waitingtrans', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun3);var fun4 = new TreeNode('成功交易信息', '/StockSpirit/actionServlet?actionCode=stockTrans&methodCode=succtrans', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun4);var fun5 = new TreeNode('盈亏情况', '/StockSpirit/actionServlet?actionCode=stockTrans&methodCode=transearn', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun5);root.add(fun1);
+           var fun1 = new TreeNode('交易管理');var fun2 = new TreeNode('买入股票', '/stock/tradstock.jsp', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun2);var fun3 = new TreeNode('挂单情况', '/StockSpirit/actionServlet?actionCode=stockTrans&methodCode=waitingtrans', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun3);var fun4 = new TreeNode('成功交易信息', '/StockSpirit/actionServlet?actionCode=stockTrans&methodCode=succtrans', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun4);var fun5 = new TreeNode('盈亏情况', '/StockSpirit/actionServlet?actionCode=stockTrans&methodCode=transearn', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun5);root.add(fun1);
            var fun6 = new TreeNode('股票查询');var fun7 = new TreeNode('股票查询', '/stock/test.jsp', 'tree_node.gif', null, 'tree_node.gif', null);fun6.add(fun7);root.add(fun6);
 		   tree = new Tree(root);tree.show('menuTree')
 </SCRIPT>

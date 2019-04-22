@@ -32,29 +32,21 @@
 
 <script type="text/javascript">
   function check(){
-  		if(form0.stockid.value==null ||form0.stockid.value==""){
+  		if(form0.code.value==null ||form0.code.value==""){
   			alert("股票代码不能为空！");
   			
   			return;
-  		}else if(form0.stockname.value==null || form0.stockname.value==""){
-  			alert("股票名称不能为空！");
+  		}else if(form0.pride.value==null || form0.pride.value==""){
+  			alert("股票价格不能为空！");
   			return;
-  		}else if(form0.stocknum.value==null || form0.stocknum.value==""){
-  			alert("发行量不能为空！");
+  		}else if(form0.num.value==null || form0.num.value==""){
+  			alert("购买量不能为空！");
   			return;
-  		}else if(!form0.stocknum.value.match(/^[1-9]\d*$/)){
-  			alert('发行量为数字');
-  			return;
-  		}else if(form0.stockprice.value==null || form0.stockprice.value==""){
-  			alert("发行价不能为空！");
-  			return;
-  		}else if(!form0.stockprice.value.match(/^[1-9]\d*\.?\d{0,2}$/)){
-  			alert('发行价为double型');
-  			return;
-  		}else if(form0.owner.value==null || form0.owner.value==""){
-  			alert("持有人不能为空！");
-  			return;
-  		}else{
+  		}
+        else if(form0.num.value%100!=0){
+            alert("购买量为100的整数倍！");
+            return;
+        }else{
   		  form0.submit();
   		  }
   }
@@ -112,60 +104,42 @@ type=text/javascript></SCRIPT>
     style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; COLOR: #566984; PADDING-TOP: 10px; BACKGROUND-COLOR: white" 
     vAlign=top align=middle>
           <DIV>
+            <form method="post" action="${ pageContext.request.contextPath }/stockaction.action">
             <TABLE class=gridView id=ctl00_ContentPlaceHolder2_GridView1 
       style="WIDTH: 50%; BORDER-COLLAPSE: collapse" cellSpacing=0 rules=all 
       border=1>
               <TBODY>
-              <%
-                 if(request.getAttribute("stockflag")!=null){
-                 	out.println("<script>alert('股票代码重复，请重新写入！')</script>");
-                 }
-               %>
+
+
                 <TR>
-                  <TH colspan="2" class=gridViewHeader scope=col>增加股票信息</TH>
+                  <TH colspan="2" class=gridViewHeader scope=col>买入股票</TH>
                 </TR>
                 <TR>
                   <TH class=gridViewHeader style="text-align: right" scope=col>股票代码</TH>
-                  <TH scope=col><input type="text" name="stockid" class="easyui-validatebox" required="true" validType="length[4,6]"></TH>
+                  <TH scope=col><input type="text" name="code" class="easyui-validatebox" required="true" validType="length[4,6]"></TH>
                 </TR>
                
                 <TR>
-                  <TH class=gridViewHeader style="text-align: right"  scope=col>股票名称</TH>
-                  <TH scope=col><input type="text" name="stockname" class="easyui-validatebox" required="true" ></TH>
+                  <TH class=gridViewHeader style="text-align: right"  scope=col>价格</TH>
+                  <TH scope=col><input type="text" name="pride" class="easyui-validatebox" required="true" ></TH>
                 </TR>
                 <TR>
-                  <TH class=gridViewHeader style="text-align: right"  scope=col >发行量</TH>
+                  <TH class=gridViewHeader style="text-align: right"  scope=col >数量</TH>
                   <TH scope=col>
-                    <input type="text" name="stocknum" class="easyui-validatebox" required="true" validType="intnum">
-                  </span></TH>
+                    <input type="text" name="num" class="easyui-validatebox" required="true" validType="intnum">
+                  </TH>
                 </TR>
-                <TR>
-                  <TH class=gridViewHeader style="text-align: right" scope=col>发行价</TH>
-                  <TH   scope=col><input type="text" name="stockprice" class="easyui-validatebox" required="true" validType="doublenum"></TH>
-                </TR>
-                <TR>
-                
-                  <TH  class=gridViewHeader style="text-align: right" scope=col>持有人</TH>
-                  <TH  scope=col><select name="owner" class="easyui-validatebox" required="true" >
-                    <option>--</option>
 
-                  
-                  </select></TH>
-                  </TR>
-                <TR>
-                  <TH  class=gridViewHeader scope=col>&nbsp;</TH>
-                  <TH  scope=col>&nbsp;</TH>
-                </TR>
+
                 <TR>
                   <TH  class=gridViewHeader scope=col>&nbsp;</TH>
                   <TH  scope=col>
                     <input type="button" value="确认增加" onclick="check()">
-                    <input type="hidden" value="stock" name="actionCode">
-                    <input type="hidden" value="addstock" name="methodCode">
                   </TH>
                 </TR>
               </TBODY>
             </TABLE>
+            </form>
           </DIV>
         </TD>
         <TD style="BACKGROUND-IMAGE: url(images/main_rs.gif)"></TD>
