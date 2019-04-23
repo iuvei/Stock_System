@@ -1,5 +1,7 @@
 package dao;
 
+import app.TradeEntity;
+
 import java.util.List;
 
 /**

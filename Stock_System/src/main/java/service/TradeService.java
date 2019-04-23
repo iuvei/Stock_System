@@ -1,5 +1,7 @@
 package service;
 
+import app.TradeEntity;
+
 import java.util.List;
 
 /**

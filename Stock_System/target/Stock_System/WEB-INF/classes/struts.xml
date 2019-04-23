@@ -21,7 +21,7 @@
 		</action>
 
 		<action name="tradeAction" class="tradeAction" >
-			<result name="input2">stock/tradstock.jsp</result>
+			<result name="input2">stock/InputSuccess.jsp</result>
 		</action>
 	</package>
 </struts>

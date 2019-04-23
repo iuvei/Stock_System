@@ -1,5 +1,6 @@
 package service.Impl;
 
+import app.TradeEntity;
 import dao.TradeDaoImpl;
 import org.springframework.transaction.annotation.Transactional;
 import service.TradeService;

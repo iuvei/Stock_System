@@ -1,5 +1,6 @@
 package dao;
 
+import app.TradeEntity;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -19,6 +20,8 @@ public class TradeDaoImpl  extends HibernateDaoSupport implements TradeDao{
     @Override
     public void save(TradeEntity tradeEntity) {
             this.getHibernateTemplate().save(tradeEntity);
+
+
     }
 
     @Override

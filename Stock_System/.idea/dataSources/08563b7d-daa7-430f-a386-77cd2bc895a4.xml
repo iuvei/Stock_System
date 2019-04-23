@@ -90,7 +90,7 @@
     </column>
     <column id="41" parent="26" name="tradeprice">
       <Position>3</Position>
-      <DataType>decimal(8)|0</DataType>
+      <DataType>float(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="42" parent="26" name="tradenumber">
@@ -100,7 +100,8 @@
     </column>
     <column id="43" parent="26" name="tradedate">
       <Position>5</Position>
-      <DataType>date|0</DataType>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="44" parent="26" name="tradetypeid">
       <Position>6</Position>
@@ -125,93 +126,81 @@
     </index>
     <key id="49" parent="26" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>tradecode</ColNames>
+      <ColNames>tradedate</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="50" parent="26" name="FK_Reference_2">
-      <ColNames>tradetypeid</ColNames>
-      <RefSchemaName>stock_system</RefSchemaName>
-      <RefTableName>tradetype</RefTableName>
-      <RefColNames>tradetypeid</RefColNames>
-    </foreign-key>
-    <foreign-key id="51" parent="26" name="FK_Reference_3">
-      <ColNames>usersid</ColNames>
-      <RefSchemaName>stock_system</RefSchemaName>
-      <RefTableName>users</RefTableName>
-      <RefColNames>usersid</RefColNames>
-    </foreign-key>
-    <column id="52" parent="27" name="tradeinfocode">
+    <column id="50" parent="27" name="tradeinfocode">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="27" name="tradeinfoname">
+    <column id="51" parent="27" name="tradeinfoname">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="54" parent="27" name="tradeinfobuypride">
+    <column id="52" parent="27" name="tradeinfobuypride">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="55" parent="27" name="tradeinfodealnum">
+    <column id="53" parent="27" name="tradeinfodealnum">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="27" name="tradeinfodate">
+    <column id="54" parent="27" name="tradeinfodate">
       <Position>5</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="57" parent="27" name="PRIMARY">
+    <key id="55" parent="27" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>tradeinfocode</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="58" parent="28" name="tradetypeid">
+    <column id="56" parent="28" name="tradetypeid">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="59" parent="28" name="type">
+    <column id="57" parent="28" name="type">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="60" parent="28" name="PRIMARY">
+    <key id="58" parent="28" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>tradetypeid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="61" parent="29" name="usersid">
+    <column id="59" parent="29" name="usersid">
       <Position>1</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="62" parent="29" name="name">
+    <column id="60" parent="29" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="63" parent="29" name="password">
+    <column id="61" parent="29" name="password">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="64" parent="29" name="email">
+    <column id="62" parent="29" name="email">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="65" parent="29" name="phone">
+    <column id="63" parent="29" name="phone">
       <Position>5</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="66" parent="29" name="PRIMARY">
+    <key id="64" parent="29" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>usersid</ColNames>
       <Primary>1</Primary>

@@ -5,11 +5,11 @@
 <hibernate-mapping>
 
     <class name="app.TradeEntity" table="trade" schema="stock_system">
-        <id name="tradecode" column="tradecode"/>
+        <id name="tradedate" column="tradedate"/>
+        <property name="tradecode" column="tradecode"/>
         <property name="tradename" column="tradename"/>
         <property name="tradeprice" column="tradeprice"/>
         <property name="tradenumber" column="tradenumber"/>
-        <property name="tradedate" column="tradedate"/>
         <property name="tradetypeid" column="tradetypeid"/>
         <property name="usersid" column="usersid"/>
         <property name="cheak" column="cheak"/>

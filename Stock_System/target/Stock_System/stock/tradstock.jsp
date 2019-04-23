@@ -1,3 +1,5 @@
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
@@ -133,6 +135,19 @@ type=text/javascript></SCRIPT>
                   <TH class=gridViewHeader style="text-align: right"  scope=col >数量</TH>
                   <TH scope=col>
                     <input type="text" name="tradenumber" >
+                  </TH>
+                </TR>
+
+                <TR>
+                  <TH class=gridViewHeader style="text-align: right"  scope=col >交易时间</TH>
+                  <TH scope=col>
+                    <input type="text" name="tradedate" value="<%=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime())%>">
+                  </TH>
+                </TR>
+                <TR>
+                  <TH class=gridViewHeader style="text-align: right"  scope=col >交易用户</TH>
+                  <TH scope=col>
+                    <input type="text" name="usersid" value="<s:property value="#session.usersEntity.usersid"/>"  >
                   </TH>
                 </TR>
 

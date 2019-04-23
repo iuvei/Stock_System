@@ -1,7 +1,7 @@
 package app;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by 63128 on 2019/4/23.
@@ -11,14 +11,14 @@ import java.sql.Date;
 public class TradeEntity {
     private String tradecode;
     private String tradename;
-    private int tradeprice;
+    private double tradeprice;
     private int tradenumber;
-    private Date tradedate;
-    private int cheak;
+    private Timestamp tradedate;
     private int tradetypeid;
     private String usersid;
+    private int cheak;
 
-    @Id
+    @Basic
     @Column(name = "tradecode")
     public String getTradecode() {
         return tradecode;
@@ -40,11 +40,11 @@ public class TradeEntity {
 
     @Basic
     @Column(name = "tradeprice")
-    public int getTradeprice() {
+    public double getTradeprice() {
         return tradeprice;
     }
 
-    public void setTradeprice(int tradeprice) {
+    public void setTradeprice(double tradeprice) {
         this.tradeprice = tradeprice;
     }
 
@@ -58,52 +58,14 @@ public class TradeEntity {
         this.tradenumber = tradenumber;
     }
 
-    @Basic
+    @Id
     @Column(name = "tradedate")
-    public Date getTradedate() {
+    public Timestamp getTradedate() {
         return tradedate;
     }
 
-    public void setTradedate(Date tradedate) {
+    public void setTradedate(Timestamp tradedate) {
         this.tradedate = tradedate;
-    }
-
-    @Basic
-    @Column(name = "cheak")
-    public int getCheak() {
-        return cheak;
-    }
-
-    public void setCheak(int cheak) {
-        this.cheak = cheak;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        TradeEntity that = (TradeEntity) o;
-
-        if (tradeprice != that.tradeprice) return false;
-        if (tradenumber != that.tradenumber) return false;
-        if (cheak != that.cheak) return false;
-        if (tradecode != null ? !tradecode.equals(that.tradecode) : that.tradecode != null) return false;
-        if (tradename != null ? !tradename.equals(that.tradename) : that.tradename != null) return false;
-        if (tradedate != null ? !tradedate.equals(that.tradedate) : that.tradedate != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = tradecode != null ? tradecode.hashCode() : 0;
-        result = 31 * result + (tradename != null ? tradename.hashCode() : 0);
-        result = 31 * result + tradeprice;
-        result = 31 * result + tradenumber;
-        result = 31 * result + (tradedate != null ? tradedate.hashCode() : 0);
-        result = 31 * result + cheak;
-        return result;
     }
 
     @Basic
@@ -124,5 +86,50 @@ public class TradeEntity {
 
     public void setUsersid(String usersid) {
         this.usersid = usersid;
+    }
+
+    @Basic
+    @Column(name = "cheak")
+    public int getCheak() {
+        return cheak;
+    }
+
+    public void setCheak(int cheak) {
+        this.cheak = cheak;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TradeEntity that = (TradeEntity) o;
+
+        if (Double.compare(that.tradeprice, tradeprice) != 0) return false;
+        if (tradenumber != that.tradenumber) return false;
+        if (tradetypeid != that.tradetypeid) return false;
+        if (cheak != that.cheak) return false;
+        if (tradecode != null ? !tradecode.equals(that.tradecode) : that.tradecode != null) return false;
+        if (tradename != null ? !tradename.equals(that.tradename) : that.tradename != null) return false;
+        if (tradedate != null ? !tradedate.equals(that.tradedate) : that.tradedate != null) return false;
+        if (usersid != null ? !usersid.equals(that.usersid) : that.usersid != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = tradecode != null ? tradecode.hashCode() : 0;
+        result = 31 * result + (tradename != null ? tradename.hashCode() : 0);
+        temp = Double.doubleToLongBits(tradeprice);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + tradenumber;
+        result = 31 * result + (tradedate != null ? tradedate.hashCode() : 0);
+        result = 31 * result + tradetypeid;
+        result = 31 * result + (usersid != null ? usersid.hashCode() : 0);
+        result = 31 * result + cheak;
+        return result;
     }
 }
