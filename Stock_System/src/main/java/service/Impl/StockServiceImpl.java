@@ -20,6 +20,11 @@ public class StockServiceImpl implements StockService {
         return stockDao.queryStockByCode(code);
     }
 
+    @Override
+    public void setTradeDao(String tradeDao) {
+
+    }
+
     public void setStockDao(StockDaoImpl stockDao) {
         this.stockDao = stockDao;
     }

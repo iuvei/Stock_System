@@ -101,7 +101,6 @@
     <column id="43" parent="26" name="tradedate">
       <Position>5</Position>
       <DataType>date|0</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="44" parent="26" name="tradetypeid">
       <Position>6</Position>

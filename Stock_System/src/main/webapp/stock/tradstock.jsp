@@ -1,4 +1,6 @@
-<%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
@@ -33,18 +35,18 @@
 <script type="text/javascript">
   function check(){
   		if(form0.code.value==null ||form0.code.value==""){
-  			alert("π…∆±¥˙¬Î≤ªƒ‹Œ™ø’£°");
+  			alert("ËÇ°Á•®‰ª£Á†Å‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
   			
   			return;
   		}else if(form0.pride.value==null || form0.pride.value==""){
-  			alert("π…∆±º€∏Ò≤ªƒ‹Œ™ø’£°");
+  			alert("ËÇ°Á•®‰ª∑Ê†º‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
   			return;
   		}else if(form0.num.value==null || form0.num.value==""){
-  			alert("π∫¬Ú¡ø≤ªƒ‹Œ™ø’£°");
+  			alert("Ë¥≠‰π∞Èáè‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
   			return;
   		}
         else if(form0.num.value%100!=0){
-            alert("π∫¬Ú¡øŒ™100µƒ’˚ ˝±∂£°");
+            alert("Ë¥≠‰π∞Èáè‰∏∫100ÁöÑÊï¥Êï∞ÂÄçÔºÅ");
             return;
         }else{
   		  form0.submit();
@@ -82,7 +84,7 @@ src="EmployeeMgr.files/ScriptResource(1).axd"
 type=text/javascript></SCRIPT>
 
 <DIV>
-<form name="form0" method="post" action="<%=request.getContextPath()%>/actionServlet">
+  <form method="post" action="${ pageContext.request.contextPath }/tradeAction.action">
   <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
     <TBODY>
       <TR 
@@ -92,7 +94,7 @@ type=text/javascript></SCRIPT>
       style="FLOAT: left; BACKGROUND-IMAGE: url(images/main_hl.gif); WIDTH: 15px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 47px"></SPAN></TD>
         <TD><SPAN 
       style="FLOAT: left; BACKGROUND-IMAGE: url(images/main_hl2.gif); WIDTH: 15px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 47px"></SPAN><SPAN 
-      style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; BACKGROUND-IMAGE: url(images/main_hb.gif); PADDING-BOTTOM: 10px; COLOR: white; PADDING-TOP: 10px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 47px; TEXT-ALIGN: center; 0px: ">π…∆±π‹¿Ì</SPAN><SPAN 
+      style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; BACKGROUND-IMAGE: url(images/main_hb.gif); PADDING-BOTTOM: 10px; COLOR: white; PADDING-TOP: 10px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 47px; TEXT-ALIGN: center; 0px: ">ËÇ°Á•®ÁÆ°ÁêÜ</SPAN><SPAN 
       style="FLOAT: left; BACKGROUND-IMAGE: url(images/main_hr.gif); WIDTH: 60px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 47px"></SPAN></TD>
         <TD 
     style="BACKGROUND-POSITION: 50% bottom; BACKGROUND-IMAGE: url(images/main_rc.gif)" 
@@ -104,7 +106,7 @@ type=text/javascript></SCRIPT>
     style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; COLOR: #566984; PADDING-TOP: 10px; BACKGROUND-COLOR: white" 
     vAlign=top align=middle>
           <DIV>
-            <form method="post" action="${ pageContext.request.contextPath }/stockaction.action">
+            <form method="post" action="${ pageContext.request.contextPath }/tradeAction.action">
             <TABLE class=gridView id=ctl00_ContentPlaceHolder2_GridView1 
       style="WIDTH: 50%; BORDER-COLLAPSE: collapse" cellSpacing=0 rules=all 
       border=1>
@@ -112,21 +114,25 @@ type=text/javascript></SCRIPT>
 
 
                 <TR>
-                  <TH colspan="2" class=gridViewHeader scope=col>¬Ú»Îπ…∆±</TH>
+                  <TH colspan="2" class=gridViewHeader scope=col>‰π∞ÂÖ•ËÇ°Á•®</TH>
                 </TR>
                 <TR>
-                  <TH class=gridViewHeader style="text-align: right" scope=col>π…∆±¥˙¬Î</TH>
-                  <TH scope=col><input type="text" name="code" class="easyui-validatebox" required="true" validType="length[4,6]"></TH>
+                  <TH class=gridViewHeader style="text-align: right" scope=col>ËÇ°Á•®‰ª£Á†Å</TH>
+                  <TH scope=col><input type="text" id="tradecode" name="tradecode"></TH>
+                </TR>
+                <TR>
+                  <TH class=gridViewHeader style="text-align: right" scope=col>ËÇ°Á•®ÂêçÁß∞</TH>
+                  <TH scope=col><input type="text" id="tradename" name="tradename"></TH>
                 </TR>
                
                 <TR>
-                  <TH class=gridViewHeader style="text-align: right"  scope=col>º€∏Ò</TH>
-                  <TH scope=col><input type="text" name="pride" class="easyui-validatebox" required="true" ></TH>
+                  <TH class=gridViewHeader style="text-align: right"  scope=col>‰ª∑Ê†º</TH>
+                  <TH scope=col><input type="text" id="tradeprice" name="tradeprice"  ></TH>
                 </TR>
                 <TR>
-                  <TH class=gridViewHeader style="text-align: right"  scope=col > ˝¡ø</TH>
+                  <TH class=gridViewHeader style="text-align: right"  scope=col >Êï∞Èáè</TH>
                   <TH scope=col>
-                    <input type="text" name="num" class="easyui-validatebox" required="true" validType="intnum">
+                    <input type="text" name="tradenumber" >
                   </TH>
                 </TR>
 
@@ -134,7 +140,7 @@ type=text/javascript></SCRIPT>
                 <TR>
                   <TH  class=gridViewHeader scope=col>&nbsp;</TH>
                   <TH  scope=col>
-                    <input type="button" value="»∑»œ‘ˆº”" onclick="check()">
+                    <input type="submit" value="Êèê‰∫§" >
                   </TH>
                 </TR>
               </TBODY>
@@ -156,10 +162,6 @@ style="BACKGROUND-IMAGE: url(images/main_rf.gif)"></TD>
   </TABLE>
 </form>
 </DIV>
-<SCRIPT type=text/javascript>
-//<![CDATA[
-Sys.Application.initialize();
-//]]>
-</SCRIPT>
+
 </BODY>
 </HTML>

@@ -19,5 +19,9 @@
 		<action name="stockaction" class="stockaction" >
 			<result name="test">stock/test.jsp</result>
 		</action>
+
+		<action name="tradeAction" class="tradeAction" >
+			<result name="input2">stock/tradstock.jsp</result>
+		</action>
 	</package>
 </struts>

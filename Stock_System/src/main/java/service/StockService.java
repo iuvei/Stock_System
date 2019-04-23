@@ -7,4 +7,6 @@ import app.StockEntity;
  */
 public interface StockService {
     public StockEntity getStockInfo(String code);
+
+    void setTradeDao(String tradeDao);
 }

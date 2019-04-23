@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by 63128 on 2019/4/22.
+ * Created by 63128 on 2019/4/23.
  */
 @Entity
 @Table(name = "trade", schema = "stock_system", catalog = "")
@@ -15,6 +15,8 @@ public class TradeEntity {
     private int tradenumber;
     private Date tradedate;
     private int cheak;
+    private int tradetypeid;
+    private String usersid;
 
     @Id
     @Column(name = "tradecode")
@@ -102,5 +104,25 @@ public class TradeEntity {
         result = 31 * result + (tradedate != null ? tradedate.hashCode() : 0);
         result = 31 * result + cheak;
         return result;
+    }
+
+    @Basic
+    @Column(name = "tradetypeid")
+    public int getTradetypeid() {
+        return tradetypeid;
+    }
+
+    public void setTradetypeid(int tradetypeid) {
+        this.tradetypeid = tradetypeid;
+    }
+
+    @Basic
+    @Column(name = "usersid")
+    public String getUsersid() {
+        return usersid;
+    }
+
+    public void setUsersid(String usersid) {
+        this.usersid = usersid;
     }
 }

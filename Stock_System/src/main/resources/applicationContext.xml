@@ -41,6 +41,7 @@
         <property name="mappingResources">
             <list>
                 <value>app/UsersEntity.hbm.xml</value>
+                <value>app/TradeEntity.hbm.xml</value>
             </list>
         </property>
     </bean>
@@ -56,7 +57,7 @@
     <bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
-
+<!--Action-->
     <!-- 管理struts2的action对象，scope="prototype"表示多例 -->
     <bean id="loginAction" class="action.LoginAction" scope="prototype">
         <property name="userService" ref="userService"></property>
@@ -65,8 +66,11 @@
     <bean id="stockaction" class="action.Stockaction" scope="prototype">
         <property name="stockService" ref="stockService"></property>
     </bean>
+    <bean id="tradeAction" class="action.TradeAction" scope="prototype">
+        <property name="tradeService" ref="tradeService"></property>
+    </bean>
 
-
+    <!--Service-->
     <bean id="userService" class="service.UserService">
         <property name="userDao" ref="userDao"></property>
     </bean>
@@ -74,13 +78,20 @@
     <bean id="stockService" class="service.Impl.StockServiceImpl">
         <property name="stockDao" ref="stockDao"></property>
     </bean>
-
+    <bean id="tradeService" class="service.Impl.TradeServiceImpl">
+        <property name="tradeDao" ref="tradeDao"></property>
+    </bean>
+    <!--Dao-->
     <bean id="userDao" class="dao.UserDao">
         <property name="hibernateTemplate" ref="hibernateTemplate"></property>
     </bean>
     <bean id="stockDao" class="dao.StockDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <bean id="tradeDao" class="dao.TradeDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
 
 
 </beans>
