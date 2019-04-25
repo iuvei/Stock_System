@@ -29,7 +29,7 @@
         <TH class=gridViewHeader scope=col>数量</TH>
         <TH class=gridViewHeader scope=col>委托时间</TH>
         <TH class=gridViewHeader scope=col>委托类型</TH>
-       
+
     </TR>
      <s:iterator value="#request.tradeEntities" >
      <tr>

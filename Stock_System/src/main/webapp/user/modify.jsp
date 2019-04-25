@@ -1,7 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <%@page contentType="text/html;charset=gbk" %>
-<%@page import="java.util.*" %>
-<%@page import="com.firstgroup.entity.*" %>
+
 <HTML>
 <HEAD>
 <TITLE>Untitled Page</TITLE>
@@ -31,19 +30,7 @@
 <BODY 
 style="BACKGROUND-POSITION-Y: -120px; BACKGROUND-IMAGE: url(images/bg.gif); BACKGROUND-REPEAT: repeat-x">
 <SCRIPT type=text/javascript>
-//<![CDATA[
-var theForm = document.forms['aspnetForm'];
-if (!theForm) {
-    theForm = document.aspnetForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
+
 </SCRIPT>
 <SCRIPT src="EmployeeMgr.files/WebResource.axd" type=text/javascript></SCRIPT>
 <SCRIPT src="EmployeeMgr.files/ScriptResource.axd" 
@@ -81,40 +68,31 @@ type=text/javascript></SCRIPT>
                 <TR>
                   <TH colspan="2" class=gridViewHeader scope=col>用户详情</TH>
                 </TR>
-                <% 
-                	MyUserInfo mu = new MyUserInfo();
-                	
-                    mu = (MyUserInfo)request.getAttribute("mu");
-                
-                
-                 %>
+
                 <TR>
-                  <TH class=gridViewHeader scope=col>用户名:</TH>
-                  <TH scope=col><%=mu.getT_userid()%></TH>
+                  <TH class=gridViewHeader scope=col>用户账号:</TH>
+                  <<TH scope=col><input type="text" id="tradecode" name="tradecode" value="1001"></TH>
                 </TR>
                 <TR>
-                  <TH class=gridViewHeader  scope=col>真实姓名：</TH>
-                  <TH scope=col><%=mu.getT_username()%></TH>
+                  <TH class=gridViewHeader  scope=col>用户名：</TH>
+                  <TH scope=col><input type="text" id="tradecode" name="tradecode" value="测试用户"></TH>
                 </TR>
                 <TR>
                   <TH class=gridViewHeader scope=col>用户密码：</TH>
-                  <TH   scope=col><%=mu.getT_password()%></TH>
+                  <TH scope=col><input type="text" id="tradecode" name="tradecode" value="*********"></TH>
                 </TR>
                 <TR>
                   <TH  class=gridViewHeader scope=col>Tel</TH>
-                  <TH  scope=col><%=mu.getT_TEL()%></TH>
+                  <TH scope=col><input type="text" id="tradecode" name="tradecode" value="131"></TH>
                 </TR>
                 <TR>
                   <TH class=gridViewHeader scope=col>E-mail</TH>
-                  <TH  scope=col><%=mu.getT_email()%></TH>
+                  <TH scope=col><input type="text" id="tradecode" name="tradecode" value="123@qq.com"></TH>
                 </TR>
-                <TR>
-                  <TH class=gridViewHeader scope=col>address</TH>
-                  <TH  scope=col><%=mu.getT_address()%></TH>
-                </TR>
+
                 <TR>
                  
-                   <TH colspan="2" class=gridViewHeader scope=col><a href="<%=request.getContextPath()%>/actionServlet?actionCode=myuser&methodCode=display&pagenow=<%=(String) request.getAttribute("pagenow")%>">返回</a></TH>
+                   <TH colspan="2" class=gridViewHeader scope=col><a href="<%=request.getContextPath()%>/actionServlet?actionCode=myuser&methodCode=display&pagenow=<%=(String) request.getAttribute("pagenow")%>">提交</a></TH>
                   
                   </TR>
               </TBODY>
@@ -136,9 +114,7 @@ style="BACKGROUND-IMAGE: url(images/main_rf.gif)"></TD>
   </TABLE>
 </DIV>
 <SCRIPT type=text/javascript>
-//<![CDATA[
-Sys.Application.initialize();
-//]]>
+
 </SCRIPT>
 </BODY>
 </HTML>
