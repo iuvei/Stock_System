@@ -150,6 +150,12 @@ type=text/javascript></SCRIPT>
                     <input type="text" name="usersid" value="<s:property value="#session.usersEntity.usersid"/>"  >
                   </TH>
                 </TR>
+                <TR>
+                  <TH class=gridViewHeader style="text-align: right"  scope=col >交易类型</TH>
+                  <TH scope=col>
+                    <input type="text" name="cheak" value="买入"  readonly="true" >
+                  </TH>
+                </TR>
 
 
                 <TR>

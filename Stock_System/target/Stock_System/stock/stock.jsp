@@ -12,26 +12,38 @@
 <html>
 <head>
   <title>Title</title>
+
+
 </head>
 <body>
 
-<table>
-              <tr>
-                  <th>股票代码</th>
-                  <th>股票名称</th>
-                  <th>委托价格</th>
-                  <th>数量</th>
-                          <th>订单提交时间</th>
-              </tr>
-     <s:iterator value="#request.tradeEntities">
+
+<TABLE class=gridView id=ctl00_ContentPlaceHolder2_GridView1
+       style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 rules=all
+       border=1>
+    <TBODY>
+    <TR>
+        <TH class=gridViewHeader scope=col>股票代码</TH>
+        <TH class=gridViewHeader scope=col>股票名称</TH>
+        <TH class=gridViewHeader scope=col>委托价格</TH>
+        <TH class=gridViewHeader scope=col>数量</TH>
+        <TH class=gridViewHeader scope=col>委托时间</TH>
+        <TH class=gridViewHeader scope=col>委托类型</TH>
+       
+    </TR>
+     <s:iterator value="#request.tradeEntities" >
      <tr>
          <td><s:property value="tradecode"/></td>
          <td><s:property value="tradename"/></td>
          <td><s:property value="tradeprice"/></td>
          <td><s:property value="tradenumber"/></td>
              <td><s:property value="tradedate"/></td>
+             <td><s:property value="cheak"/></td>
+
      </tr>
-     </s:iterator>  
+
+     </s:iterator>
+    </TBODY>
      </table>
 
 

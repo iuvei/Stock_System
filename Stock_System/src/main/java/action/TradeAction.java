@@ -4,7 +4,6 @@ import app.TradeEntity;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.struts2.ServletActionContext;
-import service.Impl.TradeServiceImpl;
 import service.TradeService;
 
 import javax.servlet.http.HttpServletRequest;

@@ -90,12 +90,12 @@
     </column>
     <column id="41" parent="26" name="tradeprice">
       <Position>3</Position>
-      <DataType>float(8)|0</DataType>
+      <DataType>varchar(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="42" parent="26" name="tradenumber">
       <Position>4</Position>
-      <DataType>decimal(8)|0</DataType>
+      <DataType>int(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="43" parent="26" name="tradedate">
@@ -115,7 +115,7 @@
     </column>
     <column id="46" parent="26" name="cheak">
       <Position>8</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="47" parent="26" name="FK_Reference_2">
