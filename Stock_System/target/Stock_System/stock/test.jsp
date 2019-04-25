@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="second_body">
-    <form method="post" action="${ pageContext.request.contextPath }/stockaction.action">
+        <form method="post" action="${ pageContext.request.contextPath }/stockaction.action">
         <table border="0" style="width:300px;">
             <tr>
                 <td style="white-space:nowrap; padding-bottom: 5px;width:55px;"> 股票代码：</td>

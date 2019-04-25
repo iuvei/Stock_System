@@ -38,8 +38,18 @@ public class TradeDaoImpl  extends HibernateDaoSupport implements TradeDao{
     public TradeEntity findById(String tradecode) {
         return this.getHibernateTemplate().load(TradeEntity.class,tradecode);
     }
-
+//查询委托订单
     @Override
+    public List<TradeEntity> findByusersid() {
+        String hql="from TradeEntity where usersid='1001'";
+        List<TradeEntity>list=(List<TradeEntity>)this.getHibernateTemplate().find(hql);
+        return list;
+    }
+
+
+
+
+
     public List<TradeEntity> findAllByHQL() {
         List<TradeEntity> list = (List<TradeEntity>) this.getHibernateTemplate().find("from TradeEntity");
         return list;

@@ -1,6 +1,7 @@
 package service.Impl;
 
 import app.TradeEntity;
+import dao.TradeDao;
 import dao.TradeDaoImpl;
 import org.springframework.transaction.annotation.Transactional;
 import service.TradeService;
@@ -40,6 +41,11 @@ public class TradeServiceImpl implements TradeService {
     @Override
     public TradeEntity findById(String tradecode) {
         return tradeDao.findById(tradecode);
+    }
+
+    @Override
+    public List<TradeEntity> findusersid() {
+        return tradeDao.findByusersid();
     }
 
     @Override

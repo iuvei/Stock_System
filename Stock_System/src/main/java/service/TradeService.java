@@ -14,6 +14,7 @@ public interface TradeService {
     void update(TradeEntity tradeEntity);
     void delete(TradeEntity tradeEntity);
     TradeEntity findById(String tradecode);
+    List<TradeEntity>findusersid();
     List<TradeEntity> findAllByHQL();
     List<TradeEntity> findAllByQBC();
     List<TradeEntity> findAllByNamedQuery();

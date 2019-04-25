@@ -20,8 +20,12 @@
 			<result name="test">stock/test.jsp</result>
 		</action>
 
-		<action name="tradeAction" class="tradeAction" >
+		<action name="tradeAction" class="tradeAction"  >
 			<result name="input2">stock/InputSuccess.jsp</result>
+		</action>
+		
+		<action name="showAction"  class="tradeAction" method="findUsersid">
+			<result name="findtradeEntities">../stock/stock.jsp</result>
 		</action>
 	</package>
 </struts>
