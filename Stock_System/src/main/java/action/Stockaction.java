@@ -44,14 +44,10 @@ public class Stockaction {
     }
 
     /*根据股票编码获取股票基本信息*/
-    //@GetMapping("/stock/{code}")//sz399001深证成指，sz000063中兴通讯
+
     public String execute() {
         StockEntity stockEntity = stockService.getStockInfo(code);
-        //model.addAttribute(stockEntity);
         ActionContext.getContext().getSession().put("data", stockEntity);
-
-        //dataMap= new HashMap<String, Object>();
-        //dataMap.put("data",stockEntity);
         return "test";
     }
 

@@ -47,6 +47,23 @@ public class TradeAction extends ActionSupport implements ModelDriven<TradeEntit
 
         return "findtradeEntities";
     }
+//查询成功交易订单
+    public  String findCheak(){
+        HttpServletRequest request= ServletActionContext.getRequest();
+        List<TradeEntity> tradeEntities=tradeService.findBycheak();
+        request.setAttribute("tradeEntities",tradeEntities);
+
+        return "findCheak";
+    }
+
+    //查询持仓情况
+    public  String findCheak2(){
+        HttpServletRequest request= ServletActionContext.getRequest();
+        List<TradeEntity> tradeEntities=tradeService.findBycheak2();
+        request.setAttribute("tradeEntities",tradeEntities);
+
+        return "findCheak2";
+    }
 }
 
 

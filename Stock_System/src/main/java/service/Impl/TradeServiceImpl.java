@@ -48,6 +48,16 @@ public class TradeServiceImpl implements TradeService {
     }
 
     @Override
+    public List<TradeEntity> findBycheak() {
+        return tradeDao.findBycheak();
+    }
+
+    @Override
+    public List<TradeEntity> findBycheak2() {
+        return tradeDao.findBycheak2();
+    }
+
+    @Override
     public List<TradeEntity> findAllByHQL() {
         return tradeDao.findAllByHQL();
     }

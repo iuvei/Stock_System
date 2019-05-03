@@ -15,6 +15,8 @@ public interface TradeDao {
 
     TradeEntity findById(String tradecode);
     List<TradeEntity> findByusersid();
+    List<TradeEntity> findBycheak();
+    List<TradeEntity> findBycheak2();
     List<TradeEntity> findAllByHQL();
     List<TradeEntity>findAllByQBC();
     List<TradeEntity>findAllByNamedQuery();

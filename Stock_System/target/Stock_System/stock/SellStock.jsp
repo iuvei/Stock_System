@@ -160,7 +160,7 @@
                                 <TR>
                                     <TH class=gridViewHeader style="text-align: right"  scope=col >交易类型</TH>
                                     <TH scope=col>
-                                        <input type="text" name="cheak" value="卖出"  readonly="true" >
+                                        <input type="text" name="cheak" value="委托卖出"  readonly="true" >
                                     </TH>
                                 </TR>
 

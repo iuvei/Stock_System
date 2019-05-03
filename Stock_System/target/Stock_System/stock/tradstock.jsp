@@ -153,7 +153,7 @@ type=text/javascript></SCRIPT>
                 <TR>
                   <TH class=gridViewHeader style="text-align: right"  scope=col >交易类型</TH>
                   <TH scope=col>
-                    <input type="text" name="cheak" value="买入"  readonly="true" >
+                    <input type="text" name="cheak" value="委托买入"  readonly="true" >
                   </TH>
                 </TR>
 

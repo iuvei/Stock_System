@@ -69,6 +69,9 @@
     <bean id="tradeAction" class="action.TradeAction" scope="prototype">
         <property name="tradeService" ref="tradeService"></property>
     </bean>
+    <bean id="cheakAction" class="action.CheakAction" scope="prototype">
+        <property name="cheakService" ref="cheakService"></property>
+    </bean>
 
     <!--Service-->
     <bean id="userService" class="service.UserService">
@@ -81,6 +84,10 @@
     <bean id="tradeService" class="service.Impl.TradeServiceImpl">
         <property name="tradeDao" ref="tradeDao"></property>
     </bean>
+
+    <bean id="cheakService" class="service.Impl.CheakServiceImpl">
+        <property name="cheakDao" ref="cheakDao"></property>
+    </bean>
     <!--Dao-->
     <bean id="userDao" class="dao.UserDao">
         <property name="hibernateTemplate" ref="hibernateTemplate"></property>
@@ -90,6 +97,9 @@
     </bean>
     <bean id="tradeDao" class="dao.TradeDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="cheakDao" class="dao.CheakDaoImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate"/>
     </bean>
 
 

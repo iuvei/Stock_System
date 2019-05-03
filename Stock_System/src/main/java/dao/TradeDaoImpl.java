@@ -41,11 +41,27 @@ public class TradeDaoImpl  extends HibernateDaoSupport implements TradeDao{
 //查询委托订单
     @Override
     public List<TradeEntity> findByusersid() {
-        String hql="from TradeEntity where usersid='1001'";
+        String hql="from TradeEntity where usersid='1001' and cheak like '%委托%'";
         List<TradeEntity>list=(List<TradeEntity>)this.getHibernateTemplate().find(hql);
         return list;
     }
 
+
+    //查询成功买入订单
+    @Override
+    public List<TradeEntity> findBycheak() {
+        String hql="from TradeEntity where usersid='1001' and cheak like '%成功%'";
+        List<TradeEntity>list=(List<TradeEntity>)this.getHibernateTemplate().find(hql);
+        return list;
+    }
+
+    //查询持仓
+    @Override
+    public List<TradeEntity> findBycheak2() {
+        String hql="from TradeEntity where usersid='1001' and cheak='成功买入'";
+        List<TradeEntity>list=(List<TradeEntity>)this.getHibernateTemplate().find(hql);
+        return list;
+    }
 
 
 

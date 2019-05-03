@@ -27,5 +27,22 @@
 		<action name="showAction"  class="tradeAction" method="findUsersid">
 			<result name="findtradeEntities">../stock/stock.jsp</result>
 		</action>
+
+		<action name="findAction"  class="tradeAction" method="findCheak">
+			<result name="findCheak">../stock/Success2.jsp</result>
+		</action>
+		<action name="findAction2"  class="tradeAction" method="findCheak2">
+			<result name="findCheak2">../stock/hold.jsp</result>
+		</action>
+
+
+
+
+
+		<action name="cheakAction"  class="cheakAction" method="findByCheak">
+			<result name="tradeEntity"></result>
+		</action>
+
+
 	</package>
 </struts>
