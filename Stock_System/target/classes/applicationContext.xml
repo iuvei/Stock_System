@@ -69,9 +69,7 @@
     <bean id="tradeAction" class="action.TradeAction" scope="prototype">
         <property name="tradeService" ref="tradeService"></property>
     </bean>
-    <bean id="cheakAction" class="action.CheakAction" scope="prototype">
-        <property name="cheakService" ref="cheakService"></property>
-    </bean>
+
 
     <!--Service-->
     <bean id="userService" class="service.UserService">
@@ -85,9 +83,7 @@
         <property name="tradeDao" ref="tradeDao"></property>
     </bean>
 
-    <bean id="cheakService" class="service.Impl.CheakServiceImpl">
-        <property name="cheakDao" ref="cheakDao"></property>
-    </bean>
+
     <!--Dao-->
     <bean id="userDao" class="dao.UserDao">
         <property name="hibernateTemplate" ref="hibernateTemplate"></property>
@@ -98,11 +94,33 @@
     <bean id="tradeDao" class="dao.TradeDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-    <bean id="cheakDao" class="dao.CheakDaoImpl">
-        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+
+    <!-- 配置调度工厂 -->
+    <bean id="startQuertz"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="ContentInjectResponseTrigger" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="ContentInjectResponseTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="cronExpression">
+            <value>0/10 * * * * ?</value><!-- 10秒执行一次 -->
+        </property>
+        <property name="jobDetail" ref="autoQueryContentResponseJob"/>
+    </bean>
+
+    <bean id="autoQueryContentResponseJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <bean class="action.CheakAction"/>
+        </property>
+        <property name="targetMethod" value="Timer"/>
+        <property name="concurrent" value="false"/>
     </bean>
 
 
 
-</beans>
+  </beans>
 

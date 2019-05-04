@@ -1,9 +1,7 @@
 package service.Impl;
 
 import app.StockEntity;
-import dao.StockDao;
 import dao.StockDaoImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import service.StockService;
 
 /**
