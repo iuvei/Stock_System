@@ -67,41 +67,16 @@
     <favorites_list name="Stock_System" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CheakAction.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/action/CheakAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5001#5017#0" expanded="true" />
-                <element signature="e#6748#6749#0" expanded="true" />
-                <element signature="e#6793#6794#0" expanded="true" />
-                <marker date="1556991549310" expanded="true" signature="1274:1322" ph="UPDATE trade... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/StockEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Arquillian JUnit Test Class" />
         <option value="Class" />
+        <option value="jsf" />
+        <option value="Jsp File" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -123,9 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/ognl-3.0.6.jar!/ognl/ObjectMethodAccessor.class" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/ognl-3.0.6.jar!/ognl/SimpleNode.class" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/ognl-3.0.6.jar!/ognl/Ognl.class" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/xwork-core-2.3.24.jar!/com/opensymphony/xwork2/ognl/OgnlUtil.class" />
         <option value="$PROJECT_DIR$/src/main/java/app/StockEntity.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/xwork-core-2.3.24.jar!/com/opensymphony/xwork2/config/ConfigurationManager.class" />
@@ -167,13 +139,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/stock/SellStock.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/stock/tradstock.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/dao/TradeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
         <option value="$PROJECT_DIR$/src/main/java/action/CheakActionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/StockDao.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-core-4.2.4.RELEASE.jar!/org/springframework/util/MethodInvoker.class" />
         <option value="$PROJECT_DIR$/src/main/java/action/CheakAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/stock/SueccessTrad.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/stock/SuccessTrade.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-q.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
       </list>
     </option>
   </component>
@@ -688,19 +663,19 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="action" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="app" />
       <recent name="" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEAProject\Stock_System\src\main\resources" />
       <recent name="D:\IDEAProject\Stock_System\src\main\webapp\WEB-INF\lib" />
       <recent name="D:\IDEAProject\Stock_System\src\main\webapp\images" />
       <recent name="D:\IDEAProject\Stock_System\src\main\java\utils" />
       <recent name="D:\IDEAProject\Stock_System\src\main\sql" />
-      <recent name="D:\IDEAProject\Stock_System\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1300,12 +1275,12 @@
       <workItem from="1556848794934" duration="4676000" />
       <workItem from="1556934328398" duration="20784000" />
       <workItem from="1556971942235" duration="8600000" />
-      <workItem from="1556985909868" duration="5673000" />
+      <workItem from="1556985909868" duration="6747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323362000" />
+    <option name="totallyTimeSpent" value="324436000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1318,7 +1293,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1340,11 +1314,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62627405" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46206117" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12607296" sideWeight="0.38165346" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.6183466" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.319206" sideWeight="0.6183466" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923368" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24087983" sideWeight="0.53227633" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1411,22 +1385,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/hibernate-core-5.0.7.Final.jar!/org/hibernate/SessionFactory.class" />
-    <entry file="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-orm-4.2.4.RELEASE.jar!/org/springframework/orm/hibernate5/support/HibernateDaoSupport.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/StockService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1516,13 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/stock/Success2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/stock/hold.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -1568,7 +1519,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/Impl/CheakServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/action/CheakActionTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/TradeDao.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1618,14 +1568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/StockDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1654,14 +1596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="266" column="0" lean-forward="false" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="116" column="46" lean-forward="true" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1709,6 +1643,73 @@
             <element signature="e#6793#6794#0" expanded="true" />
             <marker date="1556991549310" expanded="true" signature="1274:1322" ph="UPDATE trade... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/stock/SueccessTrad.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/stock/SuccessTrade.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-q.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="958">
+          <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1289">
+          <caret line="120" column="11" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="120" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stock_System.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-412">
+          <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/stock/Success2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
