@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/query/img/stocks_icon.ico" />
+    <title>股票查询 | Stock Searching</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/query/style/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">股票查询 | Stock Searching</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">全部</a></li>
+                    <li><a href="SH.html">上证</a></li>
+                    <li class="active"><a href="#">深证</a></li>
+                    <li><a href="HK.html">港股</a></li>
+                    <li><a href="US.html">美股</a></li>
+                </ul>
+            </div>
+            <div style="float: right; margin-top: 8px;">
+                <button class="btn btn-default" v-on:click="showAll">全部显示</button>
+            </div>
+            <div class="showAll">
+                <span>{{message}}</span>
+            </div>
+        </div>
+    </nav>
+    <div id="app" class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 color2 part">
+                <p class="title">深证</p>
+                <input type="text" class="form-control" placeholder="股票代码, 如:000001" v-model="gidSZ" />
+                <p class="content">{{messageSZ}}</p>
+                <p class="content">股票名称: {{nameSZ}}</p>
+                <p class="content">股票编号: {{gidSZ}}</p>
+                <p class="content">日期: {{dateSZ}}</p>
+                <p class="content">时间: {{timeSZ}}</p>
+                <p class="content">涨跌百分比: {{increPerSZ}}</p>
+                <p class="content">涨跌额: {{increaseSZ}}</p>
+                <p class="content">今日开盘价: {{todayStartPriSZ}}</p>
+                <p class="content">昨日收盘价: {{yestodEndPriSZ}}</p>
+                <p class="content">当前价格: {{nowPriSZ}}</p>
+                <p class="content">今日最高价: {{todayMaxSZ}}</p>
+                <p class="content">今日最低价: {{todayMinSZ}}</p>
+                <p class="content">竞买价: {{competitivePriSZ}}</p>
+                <p class="content">竞卖价: {{reservePriSZ}}</p>
+                <p class="content">成交量: {{traNumberSZ}}</p>
+                <p class="content">成交金额: {{traAmountSZ}}</p>
+            </div>
+            <div class="col-md-3">
+                <div class="color1 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show1"><img src="img/SZ/002415.png"></div>
+                        <span class="showName">海康威视</span>
+                        <span class="showGid">{{gid1}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri1}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer1}}</span>
+                        <span class="showData3">成交量: {{traNumber1}}</span>
+                        <span class="showData4">成交额: {{traAmount1}}</span>
+                    </div>
+                </div>
+                <div class="color3 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show4"><img src="img/SZ/000063.png"></div>
+                        <span class="showName">中兴通讯</span>
+                        <span class="showGid">{{gid4}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri4}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer4}}</span>
+                        <span class="showData3">成交量: {{traNumber4}}</span>
+                        <span class="showData4">成交额: {{traAmount4}}</span>
+                    </div>
+                </div>
+                <div class="color4 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show7"><img src="img/SZ/000651.png"></div>
+                        <span class="showName">格力电器</span>
+                        <span class="showGid">{{gid7}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri7}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer7}}</span>
+                        <span class="showData3">成交量: {{traNumber7}}</span>
+                        <span class="showData4">成交额: {{traAmount7}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="color3 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show2"><img src="img/SZ/002230.png"></div>
+                        <span class="showName">科大讯飞</span>
+                        <span class="showGid">{{gid2}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri2}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer2}}</span>
+                        <span class="showData3">成交量: {{traNumber2}}</span>
+                        <span class="showData4">成交额: {{traAmount2}}</span>
+                    </div>
+                </div>
+                <div class="color4 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show5"><img src="img/SZ/002027.png"></div>
+                        <span class="showName">分众传媒</span>
+                        <span class="showGid">{{gid5}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri5}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer5}}</span>
+                        <span class="showData3">成交量: {{traNumber5}}</span>
+                        <span class="showData4">成交额: {{traAmount5}}</span>
+                    </div>
+                </div>
+                <div class="color1 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show8"><img src="img/SZ/000002.png"></div>
+                        <span class="showName">万科A</span>
+                        <span class="showGid">{{gid8}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri8}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer8}}</span>
+                        <span class="showData3">成交量: {{traNumber8}}</span>
+                        <span class="showData4">成交额: {{traAmount8}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="color4 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show3"><img src="img/SZ/002024.png"></div>
+                        <span class="showName">苏宁易购</span>
+                        <span class="showGid">{{gid3}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri3}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer3}}</span>
+                        <span class="showData3">成交量: {{traNumber3}}</span>
+                        <span class="showData4">成交额: {{traAmount3}}</span>
+                    </div>
+                </div>
+                <div class="color1 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show6"><img src="img/SZ/002195.png"></div>
+                        <span class="showName">二三四五</span>
+                        <span class="showGid">{{gid6}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri6}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer6}}</span>
+                        <span class="showData3">成交量: {{traNumber6}}</span>
+                        <span class="showData4">成交额: {{traAmount6}}</span>
+                    </div>
+                </div>
+                <div class="color3 part2">
+                    <div class="showHeader">
+                        <div class="showImg" v-on:click="show9"><img src="img/SZ/300059.png"></div>
+                        <span class="showName">东方财富</span>
+                        <span class="showGid">{{gid9}}</span>
+                    </div>
+                    <div class="showMain">
+                        <span class="showData1">当前价格: {{nowPri9}}</span>
+                        <span class="showData2">涨跌百分比: {{increPer9}}</span>
+                        <span class="showData3">成交量: {{traNumber9}}</span>
+                        <span class="showData4">成交额: {{traAmount9}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<script src="/query/script/SZ.js"></script>
+
+</html>

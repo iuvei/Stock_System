@@ -44,7 +44,7 @@ src="Left.files/bg_left_br.gif"></TD>
 <SCRIPT language="javascript">
 var tree = null;var root = new TreeNode('系统菜单');
            var fun1 = new TreeNode('交易管理');var fun2 = new TreeNode('买入股票', '/stock/tradstock.jsp', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun2);var fun3 = new TreeNode('卖出股票', '/stock/SellStock.jsp', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun3);var fun4 = new TreeNode('委托单情况', 'action/showAction.action', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun4);var fun5 = new TreeNode('成功交易信息', 'action/findAction.action', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun5);var fun6 = new TreeNode('持仓信息查询', 'action/findAction2.action', 'tree_node.gif', null, 'tree_node.gif', null);fun1.add(fun6);root.add(fun1);
-           var fun7 = new TreeNode('股票查询');var fun8 = new TreeNode('股票查询', '/stock/test.jsp', 'tree_node.gif', null, 'tree_node.gif', null);fun7.add(fun8);root.add(fun7);
+           var fun7 = new TreeNode('股票查询');var fun8 = new TreeNode('股票查询', '/query/index.html', 'tree_node.gif', null, 'tree_node.gif', null);fun7.add(fun8);root.add(fun7);
            var fun8 = new TreeNode('用户管理');var fun9 = new TreeNode('用户信息修改', '/user/modify.jsp', 'tree_node.gif', null, 'tree_node.gif', null);fun8.add(fun9);root.add(fun8);
 		   tree = new Tree(root);tree.show('menuTree')
 </SCRIPT>

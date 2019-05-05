@@ -208,10 +208,10 @@
     </TR>
 
     <TR>
-        <TD class=gridViewItem>SZ60001<br></TD>
+        <TD class=gridViewItem>sh601006<br></TD>
         <TD class=gridViewItem>大秦铁路<br></TD>
         <TD class=gridViewItem>8.35<br></TD>
-        <TD class=gridViewItem>1200<br></TD>
+        <TD class=gridViewItem>1000<br></TD>
         <TD class=gridViewItem>+3600<br></TD>
 
     </TR>

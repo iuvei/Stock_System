@@ -54,6 +54,42 @@
             </TABLE>
         </table>
     </form>
+
+    <table>
+        <tr>
+            <td>
+                分时图
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="http://image.sinajs.cn/newchart/min/n/sh601006.gif" width="200" height="200" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                日K
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="http://image.sinajs.cn/newchart/daily/n/sh601006.gif" width="200" height="200" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                周K
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="http://image.sinajs.cn/newchart/weekly/n/sh601006.gif" width="200" height="200" />
+            </td>
+        </tr>
+    </table>
+
+
 </div>
 
 
